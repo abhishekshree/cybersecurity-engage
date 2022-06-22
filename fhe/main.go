@@ -89,7 +89,6 @@ func Decrypt(priv *PrivateKey, cipherText []byte) ([]byte, error) {
 	c := new(Num).SetBytes(cipherText)
 	if c.Cmp(priv.NSquared) == 1 {
 		return nil, ErrBigCipher
-
 	}
 
 	// a = c^l mod N^2
