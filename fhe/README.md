@@ -1,10 +1,10 @@
 # fhe
 
-Contains a prototype of paillier encryption.
+This folder contains a prototype of paillier encryption.
 
 Prerequisite:
-[]: # Language: Golang
-[]: # Environment: Linux
+- Language: Golang
+- Environment: Linux
 
 To test the implementation, run the following command:
 ```bash
