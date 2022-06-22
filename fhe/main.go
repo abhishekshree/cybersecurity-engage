@@ -92,12 +92,10 @@ func Decrypt(priv *PrivateKey, cipherText []byte) ([]byte, error) {
 
 	}
 
-	// c^l mod n^2
-	a := new(Num).Exp(c, priv.L, priv.NSquared)
-
+	// a = c^l mod N^2
 	// l(a) = (a - 1) / n
 	l := new(Num).Div(
-		new(Num).Sub(a, one),
+		new(Num).Sub(new(Num).Exp(c, priv.L, priv.NSquared), one),
 		priv.N,
 	)
 
